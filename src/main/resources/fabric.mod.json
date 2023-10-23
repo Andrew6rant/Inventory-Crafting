@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "invcrafting",
+	"version": "${version}",
+	"name": "Inventory Crafting",
+	"description": "Get a 3x3 crafting grid if you have a Crafting Table in your inventory",
+	"authors": [
+		"Andrew6rant (Andrew Grant)"
+	],
+	"contact": {
+		"sources": "https://github.com/Andrew6rant/Inventory-Crafting"
+	},
+	"license": "MIT",
+	"icon": "assets/invcrafting/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.andrew6rant.invcrafting.InvCrafting"
+		],
+		"client": [
+			"io.github.andrew6rant.invcrafting.InvCraftingClient"
+		]
+	},
+	"mixins": [
+      "invcrafting.mixins.json",
+		{
+			"config": "invcrafting.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": [
+			"1.20.x",
+			"1.19.x"
+		],
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
